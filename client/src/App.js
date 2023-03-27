@@ -1,18 +1,16 @@
 /*
-  Introducing the Event System
+  Events in Detail
   - pic
 
 */
 
 function App() {
-  // ***
   const handleClick = () => {
     console.log('Button was clicked!')
   }
 
   return (
     <div className='App'>
-      {/* *** */}
       <button onClick={handleClick}>Add Animal</button>
     </div>
   )
