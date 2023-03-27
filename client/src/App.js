@@ -1,20 +1,24 @@
 /*
-  Variations on Event Handlers P2
+  Introducing the State System
   - pic
 
 */
 
+import { useState } from 'react' // ***
+
 function App() {
+  const [count, setCount] = useState(0) // ***
+
   const handleClick = () => {
-    console.log('Button was clicked!')
+    setCount(count + 1) // ***
   }
 
   return (
     <div className='App'>
-      {/* *** change to arrow function */}
-      <button onClick={() => console.log('Button was clicked !')}>
-        Add Animal
-      </button>
+      <button onClick={handleClick}>Add Animal</button>
+
+      {/* *** */}
+      <div>Number of Animals: {count}</div>
     </div>
   )
 }
