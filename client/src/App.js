@@ -1,18 +1,21 @@
 /*
-  App Overview
+  Introducing the Event System
   - pic
-
-//////////////////////////////
-
-  Initial App Setup
-  - pic
-
-  - create AnimalShow.js
 
 */
 
 function App() {
-  return <div className='App'>Animal List Here</div>
+  // ***
+  const handleClick = () => {
+    console.log('Button was clicked!')
+  }
+
+  return (
+    <div className='App'>
+      {/* *** */}
+      <button onClick={handleClick}>Add Animal</button>
+    </div>
+  )
 }
 
 export default App
