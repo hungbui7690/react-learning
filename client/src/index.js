@@ -1,5 +1,5 @@
 /*
-  Customizing Elements with Props
+  Converting HTML to JSX
   - pic
 
 */
@@ -12,17 +12,7 @@ const root = ReactDOM.createRoot(el)
 
 function App() {
   // ***
-  const inputType = 'number'
-  const minValue = 5
-
-  // ***
-  return (
-    <input
-      style={{ border: '1px solid crimson' }}
-      type={inputType}
-      min={minValue}
-    />
-  )
+  return <textarea autoFocus={true} />
 }
 
 root.render(<App />)
