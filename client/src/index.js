@@ -1,5 +1,5 @@
 /*
-  What is JSX
+  Printing JavaScript Variables in JSX P1
   - pic
 
 */
@@ -11,7 +11,14 @@ const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
 function App() {
-  return <h1>Hi There!</h1>
+  // ***
+  let message = 'Bye There!'
+
+  if (Math.random() > 0.5) {
+    message = 'Hello There!'
+  }
+
+  return <h1>{message}</h1>
 }
 
 root.render(<App />)
