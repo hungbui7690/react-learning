@@ -1,6 +1,9 @@
 /*
-  Increasing Image Size
-  - when click on the image > increase the heart svg size
+  Adding Custom CSS
+  - pic
+
+  - create App.css & AnimalShow.css
+  - add className for all elements
 
 */
 
@@ -25,9 +28,9 @@ function App() {
   })
 
   return (
-    <div className='App'>
+    <div className='app'>
       <button onClick={handleClick}>Add Animal</button>
-      <div>{renderedAnimals}</div>
+      <div className='animal-list'>{renderedAnimals}</div>
     </div>
   )
 }
