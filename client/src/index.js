@@ -1,5 +1,5 @@
 /*
-  Converting HTML to JSX
+  Applying Styling in JSX
   - pic
 
 */
@@ -11,7 +11,6 @@ const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
 function App() {
-  // ***
   return <textarea autoFocus={true} />
 }
 
