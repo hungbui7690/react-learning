@@ -1,12 +1,26 @@
 /*
-  App Overview
+  The Path Forward
+  - pic
+  - when we search, we send the request to UnsplashAPI
+
+///////////////////////////////////
+
+  Overview of HTTP Requests
   - pic
 
 ///////////////////////////////////
 
-  Project Setup
-  - pic: show components that we need for this app
-  - create the files based on the picture
+  Understanding the API
+  - pic 
+
+///////////////////////////////////
+
+  Making an HTTP Request (Axios)
+  - pic: axios or fetch 
+    > this course > axios
+
+  - create api.js
+  - import and use in index.js
 
 */
 
