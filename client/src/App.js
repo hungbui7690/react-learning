@@ -1,14 +1,23 @@
 /*
-  Why Array Destructuring P3
+  Why Array Destructuring P4
 
 */
 
 import { useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+// *** behind the scene
+function useStateX(defaultValue) {
+  return {
+    yourState: defaultValue,
+    yourSetter: () => {},
+  }
+}
 
-  console.log(useState(50)) // *** [50, ƒ]
+function App() {
+  // *** here we use object > if we want to use > use object destructuring
+  const stateConfig = useStateX(0)
+  const count = stateConfig.yourState
+  const setCount = stateConfig.yourSetter
 
   const handleClick = () => {
     setCount(count + 1)
