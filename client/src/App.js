@@ -1,34 +1,40 @@
 /*
-  Review on how CSS Works
-  - pic
-  > https://bulma.io/documentation/
+  A Big Pile of HTML
+  - ProfileCard.js
 
-
-  Adding CSS Libraries with NPM
-  > npm install bulma
-    > check node_modules/ > we will use bulma.css > pic
-    
-  - after checking node_modules/ > we will know what we need to import 
-    > import in App.js
-
-  (***) we learn this because most of the CSS Library does not show us how to import using npm install
-
+  (***) https://bulma.io/documentation/columns/basics/
 */
 
 import ProfileCard from './ProfileCard'
 import AlexaImage from './images/alexa.png'
 import CortanaImage from './images/cortana.png'
 import SiriImage from './images/siri.png'
-
-import 'bulma/css/bulma.css' // *** after import > check browser > font changes
+import 'bulma/css/bulma.css'
 
 function App() {
+  // ***
   return (
     <div>
       <div>Personal Digital Assistants</div>
-      <ProfileCard image={AlexaImage} title='Alexa' handle='@alexa99' />
-      <ProfileCard image={CortanaImage} title='Cortana' handle='@acortana32' />
-      <ProfileCard image={SiriImage} title='Siri' handle='@siri01' />
+      <div className='container'>
+        <section className='section'>
+          <div className='columns'>
+            <div className='column is-3'>
+              <ProfileCard image={AlexaImage} title='Alexa' handle='@alexa99' />
+            </div>
+            <div className='column is-3'>
+              <ProfileCard
+                image={CortanaImage}
+                title='Cortana'
+                handle='@cortana32'
+              />
+            </div>
+            <div className='column is-3'>
+              <ProfileCard image={SiriImage} title='Siri' handle='@siri01' />
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   )
 }
