@@ -1,7 +1,6 @@
 /*
-  Why Array Destructuring P1
-  - we use a lot of lines below
-
+  Why Array Destructuring P2
+  
 */
 
 import { useState } from 'react'
@@ -12,8 +11,8 @@ function App() {
   }
 
   const myArray = makeArray()
-  const firstElement = myArray[0]
-  const secondElement = myArray[1]
+
+  const [firstElement, secondElement] = myArray // *** array destructuring
 
   console.log(firstElement, secondElement)
 }
