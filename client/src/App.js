@@ -1,6 +1,9 @@
 /*
-  List Building in React 
+  Loading and Showing SVGs
   - pic
+  
+  - add svg/
+  - AnimalShow.js
 
 */
 
@@ -19,7 +22,6 @@ function App() {
     setAnimals([...animals, getRandomAnimal()])
   }
 
-  // ***
   const renderedAnimals = animals.map((animal, index) => {
     return <AnimalShow type={animal} key={index} />
   })
