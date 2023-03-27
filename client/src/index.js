@@ -1,5 +1,5 @@
 /*
-  Shorthand JS Expressions P1
+  Shorthand JS Expressions P2
 
 */
 
@@ -10,11 +10,8 @@ const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
 function App() {
-  // ***
-  const date = new Date()
-  const time = date.toLocaleTimeString()
-
-  return <h1>{time}</h1>
+  // *** shorthand
+  return <h1>{new Date().toLocaleTimeString()}</h1>
 }
 
 root.render(<App />)
