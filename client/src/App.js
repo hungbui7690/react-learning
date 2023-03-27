@@ -1,33 +1,33 @@
 /*
-  Back to the App
+  List Building in React 
   - pic
-
-////////////////////////////////
-
-  Picking a Random Element 
 
 */
 
 import { useState } from 'react'
+import AnimalShow from './AnimalShow'
 
-// ***
 function getRandomAnimal() {
   const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse']
   return animals[Math.floor(Math.random() * animals.length)]
 }
 
 function App() {
-  const [animals, setAnimals] = useState([]) // ***
+  const [animals, setAnimals] = useState([])
+
+  const handleClick = () => {
+    setAnimals([...animals, getRandomAnimal()])
+  }
 
   // ***
-  const handleClick = () => {
-    // animals.push(getRandomAnimal()) // *** this never works > STATES CANNOT BE MODIFIED DIRECTLY!!!
-    setAnimals([...animals, getRandomAnimal()]) // copy
-  }
+  const renderedAnimals = animals.map((animal, index) => {
+    return <AnimalShow type={animal} key={index} />
+  })
 
   return (
     <div className='App'>
       <button onClick={handleClick}>Add Animal</button>
+      <div>{renderedAnimals}</div>
     </div>
   )
 }
