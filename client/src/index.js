@@ -1,5 +1,5 @@
 /*
-  Printing JavaScript Variables in JSX P1
+  Printing JavaScript Variables in JSX P2
   - pic
 
 */
@@ -11,8 +11,10 @@ const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
 function App() {
-  // ***
-  let message = 'Bye There!'
+  // let message = 123 // *** number & string is ok
+  // let message = true // true/false/undefined/null > not ok
+  // let message = {} // error
+  let message = [1, 2, 3] // unexpected result
 
   if (Math.random() > 0.5) {
     message = 'Hello There!'
