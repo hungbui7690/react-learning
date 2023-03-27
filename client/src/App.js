@@ -1,5 +1,15 @@
 /*
-  
+  Overview
+  - pic
+
+  Critical Questions 
+  - pic
+
+  Project Setup
+  - pic
+
+  What is Create React App
+  - pic
 
 */
 
