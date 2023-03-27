@@ -1,24 +1,21 @@
 /*
-  More on State
-  - pic
+  Why Array Destructuring P1
+  - we use a lot of lines below
 
 */
 
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const handleClick = () => {
-    setCount(count + 1)
+  function makeArray() {
+    return [1, 10, 32, 40]
   }
 
-  return (
-    <div className='App'>
-      <button onClick={handleClick}>Add Animal</button>
-      <div>Number of Animals: {count}</div>
-    </div>
-  )
+  const myArray = makeArray()
+  const firstElement = myArray[0]
+  const secondElement = myArray[1]
+
+  console.log(firstElement, secondElement)
 }
 
 export default App
