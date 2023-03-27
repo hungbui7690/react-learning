@@ -1,5 +1,5 @@
 /*
-  Events in Detail
+  Variations on Event Handlers P1
   - pic
 
 */
@@ -11,7 +11,14 @@ function App() {
 
   return (
     <div className='App'>
-      <button onClick={handleClick}>Add Animal</button>
+      {/* *** write directly here */}
+      <button
+        onClick={function () {
+          console.log('Button was clicked !')
+        }}
+      >
+        Add Animal
+      </button>
     </div>
   )
 }
