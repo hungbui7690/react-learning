@@ -1,20 +1,25 @@
 /*
-  Why Array Destructuring P2
-  
+  Why Array Destructuring P3
+
 */
 
 import { useState } from 'react'
 
 function App() {
-  function makeArray() {
-    return [1, 10, 32, 40]
+  const [count, setCount] = useState(0)
+
+  console.log(useState(50)) // *** [50, ƒ]
+
+  const handleClick = () => {
+    setCount(count + 1)
   }
 
-  const myArray = makeArray()
-
-  const [firstElement, secondElement] = myArray // *** array destructuring
-
-  console.log(firstElement, secondElement)
+  return (
+    <div className='App'>
+      <button onClick={handleClick}>Add Animal</button>
+      <div>Number of Animals: {count}</div>
+    </div>
+  )
 }
 
 export default App
