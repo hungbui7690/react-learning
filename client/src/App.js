@@ -1,32 +1,33 @@
 /*
-  Why Array Destructuring P4
+  Back to the App
+  - pic
+
+////////////////////////////////
+
+  Picking a Random Element 
 
 */
 
 import { useState } from 'react'
 
-// *** behind the scene
-function useStateX(defaultValue) {
-  return {
-    yourState: defaultValue,
-    yourSetter: () => {},
-  }
+// ***
+function getRandomAnimal() {
+  const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse']
+  return animals[Math.floor(Math.random() * animals.length)]
 }
 
 function App() {
-  // *** here we use object > if we want to use > use object destructuring
-  const stateConfig = useStateX(0)
-  const count = stateConfig.yourState
-  const setCount = stateConfig.yourSetter
+  const [animals, setAnimals] = useState([]) // ***
 
+  // ***
   const handleClick = () => {
-    setCount(count + 1)
+    // animals.push(getRandomAnimal()) // *** this never works > STATES CANNOT BE MODIFIED DIRECTLY!!!
+    setAnimals([...animals, getRandomAnimal()]) // copy
   }
 
   return (
     <div className='App'>
       <button onClick={handleClick}>Add Animal</button>
-      <div>Number of Animals: {count}</div>
     </div>
   )
 }
