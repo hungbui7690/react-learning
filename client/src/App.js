@@ -1,12 +1,10 @@
 /*
-  Loading and Showing SVGs
-  - pic
-  
-  - add svg/
-  - AnimalShow.js
+  Increasing Image Size
+  - when click on the image > increase the heart svg size
 
 */
 
+import './App.css'
 import { useState } from 'react'
 import AnimalShow from './AnimalShow'
 

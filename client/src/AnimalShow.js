@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bird from './svg/bird.svg'
 import cow from './svg/cow.svg'
 import cat from './svg/cat.svg'
@@ -7,7 +7,6 @@ import gator from './svg/gator.svg'
 import heart from './svg/heart.svg'
 import horse from './svg/horse.svg'
 
-// *** no heart (not animals)
 const svgMap = {
   bird,
   cow,
@@ -18,10 +17,17 @@ const svgMap = {
 }
 
 const AnimalShow = ({ type }) => {
+  const [click, setClick] = useState(1) // ***
+
+  // ***
+  const handleClick = () => {
+    setClick(click + 1)
+  }
+
   return (
-    <div>
-      {/* *** */}
+    <div onClick={handleClick}>
       <img src={svgMap[type]} alt={type} />
+      <img src={heart} alt='heart' style={{ width: 10 + 10 * click + 'px' }} />
     </div>
   )
 }
