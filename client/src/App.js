@@ -1,5 +1,5 @@
 /*
-  Using Argument Destructuring P2
+  Using Argument Destructuring P3
   - ProfileCard.js
 
 */

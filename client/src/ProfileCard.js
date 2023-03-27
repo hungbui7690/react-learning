@@ -1,9 +1,7 @@
 import React from 'react'
 
-const ProfileCard = (props) => {
-  // ***
-  const { title, handle } = props
-
+// ***
+const ProfileCard = ({ title, handle }) => {
   return (
     <div>
       <div>Title is {title}</div>
