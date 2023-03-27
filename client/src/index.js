@@ -1,6 +1,5 @@
 /*
-  Printing JavaScript Variables in JSX P2
-  - pic
+  Shorthand JS Expressions P1
 
 */
 
@@ -11,16 +10,11 @@ const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
 function App() {
-  // let message = 123 // *** number & string is ok
-  // let message = true // true/false/undefined/null > not ok
-  // let message = {} // error
-  let message = [1, 2, 3] // unexpected result
+  // ***
+  const date = new Date()
+  const time = date.toLocaleTimeString()
 
-  if (Math.random() > 0.5) {
-    message = 'Hello There!'
-  }
-
-  return <h1>{message}</h1>
+  return <h1>{time}</h1>
 }
 
 root.render(<App />)
