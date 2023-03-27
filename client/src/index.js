@@ -1,5 +1,5 @@
 /*
-  Typical Component Layouts
+  Customizing Elements with Props
   - pic
 
 */
@@ -12,14 +12,16 @@ const root = ReactDOM.createRoot(el)
 
 function App() {
   // ***
-  const name = 'Sam'
-  const age = 23
+  const inputType = 'number'
+  const minValue = 5
 
   // ***
   return (
-    <h1>
-      Hi, my name is {name} and my age is {age}
-    </h1>
+    <input
+      style={{ border: '1px solid crimson' }}
+      type={inputType}
+      min={minValue}
+    />
   )
 }
 
