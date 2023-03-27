@@ -1,5 +1,6 @@
 /*
-  Shorthand JS Expressions P2
+  Typical Component Layouts
+  - pic
 
 */
 
@@ -10,8 +11,16 @@ const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 
 function App() {
-  // *** shorthand
-  return <h1>{new Date().toLocaleTimeString()}</h1>
+  // ***
+  const name = 'Sam'
+  const age = 23
+
+  // ***
+  return (
+    <h1>
+      Hi, my name is {name} and my age is {age}
+    </h1>
+  )
 }
 
 root.render(<App />)
