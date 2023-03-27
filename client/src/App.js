@@ -1,5 +1,12 @@
 /*
-  
+  App Overview
+  - pic
+
+///////////////////////////////////
+
+  Project Setup
+  - pic: show components that we need for this app
+  - create the files based on the picture
 
 */
 
