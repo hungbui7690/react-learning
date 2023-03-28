@@ -1,7 +1,8 @@
 /*
-  Handling Form Submission P2
-  - pic
+  Handling Input Elements P1
+  - pic > (***) 
 
+  - SearchBar.js
 */
 
 import SearchBar from './components/SearchBar'
