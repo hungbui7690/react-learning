@@ -1,6 +1,7 @@
 /*
-  Displaying Images
-  - pic
+  Styling
+  - create SearchBar.css
+  - ImageList.css
 
 */
 
