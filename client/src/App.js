@@ -1,6 +1,7 @@
 /*
-  Modifying Elements
+  Why the Special Syntax (***)
   - pic
+
 
 */
 
