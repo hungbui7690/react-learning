@@ -1,9 +1,7 @@
 /*
-  Adding Images P2
-  - to make it random > add seed in the link
+  Adding Data Persistence
+  - pic
 
-  
-  (***) https://picsum.photos/seed/[random]/300/200
 */
 
 import { useState } from 'react'
