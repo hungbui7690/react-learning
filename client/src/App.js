@@ -1,6 +1,6 @@
 /*
-  Toggling Form Display P2
-  - BookShow.js
+  Default Form Values P1
+  - BookEdit.js
 
 */
 
