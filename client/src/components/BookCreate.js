@@ -15,7 +15,6 @@ const BookCreate = ({ onCreate }) => {
   }
 
   return (
-    // *** add class
     <div className='book-create'>
       <h3>Add a Book</h3>
       <form onSubmit={handleSubmit}>
