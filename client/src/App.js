@@ -1,7 +1,7 @@
 /*
-  Updating State P2
-  - pic: show how to fix the issue
-  - we did not do anything with the code this lesson
+  Don't Mutate That State
+  - pic
+    > cheatsheet: https://state-updates.vercel.app/
 
 */
 
