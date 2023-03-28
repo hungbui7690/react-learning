@@ -1,27 +1,29 @@
 /*
-  Communicating the List of Images Down
-  - pic 
+  Building a List of Images
+  - pic
+  - ImageList  
+  - ImageShow
 
-  (***) when App component is re-rendered, all other children components will be re-rendered as well
 */
 
 import { useState } from 'react'
 import searchImages from './api'
 import SearchBar from './components/SearchBar'
-import ImageList from './components/ImageList' // ***
+import ImageList from './components/ImageList'
 
 function App() {
-  const [images, setImages] = useState([]) // ***
+  const [images, setImages] = useState([])
 
   const handleSubmit = async (term) => {
     const result = await searchImages(term)
-
-    setImages(result) // ***
+    setImages(result)
   }
 
   return (
     <div>
       <SearchBar onSubmit={handleSubmit} />
+
+      {/* *** */}
       <ImageList images={images} />
     </div>
   )
