@@ -1,15 +1,16 @@
 /*
-  Running the Search 
+  Reminder on Async/Await P1
 
 */
 
-import searchImages from './api' // ***
+import searchImages from './api'
 import SearchBar from './components/SearchBar'
 
 function App() {
   const handleSubmit = (term) => {
-    // *** to test this, we don't do any console.log() > but we need to go to network tab > clear all result + filter by Fetch/XHR > pic
-    searchImages(term)
+    // *** return promise
+    const result = searchImages(term)
+    console.log(result) // Promise {<pending>}
   }
 
   return (
