@@ -1,19 +1,34 @@
 /*
-  Optional Using AsyncAwait
+  Thinking About Data Flow
   - pic
 
-//////////////////////////////////
+//////////////////////////////
 
-  Data Fetching Cleanup
-  - when we use UnsplashAPI, we just can make 50 requests/hr
-  
-  - api.js
+  Child to Parent Communication
+  - pic
 
+//////////////////////////////
+
+  Implementing Child to Parent Communication (***)
+  - App.js
+  - SearchBar.js
 
 */
 
+import SearchBar from './components/SearchBar' // ***
+
 function App() {
-  return <div className='App'>App</div>
+  // ***
+  const handleSubmit = (term) => {
+    console.log(term)
+  }
+
+  return (
+    <div>
+      {/* *** pass function as props */}
+      <SearchBar onSubmit={handleSubmit} />
+    </div>
+  )
 }
 
 export default App
