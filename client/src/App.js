@@ -1,6 +1,5 @@
 /*
-  CheatSheet  
-  > https://state-updates.vercel.app/
+  Adding a Book For Real
 
 */
 
@@ -10,9 +9,14 @@ import BookCreate from './components/BookCreate'
 function App() {
   const [books, setBooks] = useState([])
 
+  // ***
   const createBook = (title) => {
-    books.push({ id: 123, title: title })
-    setBooks(books)
+    const updatedBooks = [
+      ...books,
+      { id: 123, title }, // temporary use the fixed id
+    ]
+
+    setBooks(updatedBooks) // ***
   }
 
   return (
