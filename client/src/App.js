@@ -1,7 +1,6 @@
 /*
-  Handling Form Submission P1
-  - we know how to communicate between child and parent components 
-    > remove the button > search as typing
+  Handling Form Submission P2
+  - pic
 
 */
 
