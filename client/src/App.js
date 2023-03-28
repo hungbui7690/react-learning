@@ -1,5 +1,5 @@
 /*
-  Why the Special Syntax (***)
+  Adding Changing or Removing Object Properties
   - pic
 
 
