@@ -1,6 +1,9 @@
 /*
-  Updating the Title
-  - BookEdit.js
+  Closing the Form on Submit
+  - pic
+    > this is one way to fix > nasty
+
+  - BookShow
 
 */
 
@@ -11,7 +14,6 @@ import BookList from './components/BookList'
 function App() {
   const [books, setBooks] = useState([])
 
-  // ***
   const editBookById = (id, newTitle) => {
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
@@ -34,7 +36,6 @@ function App() {
     setBooks(updatedBooks)
   }
 
-  // *** pass props down to BookEdit
   return (
     <div className='app'>
       <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />

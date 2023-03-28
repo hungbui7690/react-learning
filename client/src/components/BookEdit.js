@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // ***
-const BookEdit = ({ book, onEdit }) => {
+const BookEdit = ({ book, onEdit, onSubmit }) => {
   const [title, setTitle] = useState(book.title)
 
   const handleChange = (e) => {
@@ -11,7 +11,8 @@ const BookEdit = ({ book, onEdit }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    onEdit(book.id, title) // *** now it works, but if does not update the showEdit state
+    onEdit(book.id, title)
+    onSubmit() // ***
   }
 
   return (
