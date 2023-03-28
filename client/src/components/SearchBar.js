@@ -1,21 +1,17 @@
 import React from 'react'
 
-// *** extract to props
 const SearchBar = ({ onSubmit }) => {
-  // ***
-  const handleClick = () => {
-    onSubmit('cars') // *** if we can see the log when we click the button > we're successfully communicate between child and parent
+  // *** not not working yet, since we haven't prevent default behavior of form
+  const handleFormSubmit = (e) => {
+    console.log('Send data to parent')
   }
 
+  // *** we will use form => onSubmit to handle submit when user press enter key
   return (
     <div>
-      <input type='text' />
-      <button
-        type='submit'
-        onClick={handleClick} // ***
-      >
-        Search{' '}
-      </button>
+      <form onSubmit={handleFormSubmit}>
+        <input type='text' />
+      </form>
     </div>
   )
 }
