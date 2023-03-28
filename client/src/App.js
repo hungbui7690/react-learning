@@ -1,11 +1,15 @@
 /*
-  Initial Setup
-  - pic > structure
+  State Location
+  - pic > where we should put the state
 
-  - create files based on pic
 */
 
+import { useState } from 'react'
+
 function App() {
+  // ***
+  const [books, setBooks] = useState([])
+
   return <div className='App'>App</div>
 }
 
