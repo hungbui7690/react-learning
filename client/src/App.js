@@ -1,7 +1,6 @@
 /*
-  Handling List Updates
+  Notes on Keys
   - pic
-    > understand why we need the key props & and why we see the warning unique key props
 
 */
 
