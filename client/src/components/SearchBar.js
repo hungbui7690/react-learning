@@ -6,21 +6,17 @@ const SearchBar = ({ onSubmit }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault()
 
-    console.log(term)
+    onSubmit(term)
   }
 
   const handleChange = (e) => {
-    setTerm(e.target.value) // ***
+    setTerm(e.target.value)
   }
 
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <input
-          type='text'
-          onChange={handleChange}
-          value={term} // ***
-        />
+        <input type='text' onChange={handleChange} value={term} />
       </form>
     </div>
   )
