@@ -1,26 +1,14 @@
 /*
-  The Path Forward
-  - pic
-  - when we search, we send the request to UnsplashAPI
-
-///////////////////////////////////
-
-  Overview of HTTP Requests
+  Optional Using AsyncAwait
   - pic
 
-///////////////////////////////////
+//////////////////////////////////
 
-  Understanding the API
-  - pic 
+  Data Fetching Cleanup
+  - when we use UnsplashAPI, we just can make 50 requests/hr
+  
+  - api.js
 
-///////////////////////////////////
-
-  Making an HTTP Request (Axios)
-  - pic: axios or fetch 
-    > this course > axios
-
-  - create api.js
-  - import and use in index.js
 
 */
 
