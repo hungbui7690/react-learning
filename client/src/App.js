@@ -1,7 +1,8 @@
 /*
-  App Overview
-  - pic
+  Initial Setup
+  - pic > structure
 
+  - create files based on pic
 */
 
 function App() {
