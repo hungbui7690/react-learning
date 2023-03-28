@@ -1,10 +1,6 @@
 /*
-  Toggling Form Display P1
-  - pic
-
+  Toggling Form Display P2
   - BookShow.js
-
-  (***) the pencil (edit icon) is made from css 
 
 */
 
