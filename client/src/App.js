@@ -1,27 +1,31 @@
 /*
-  Displaying the List
+  Deleting Records
   - pic
 
 */
 
 import { useState } from 'react'
 import BookCreate from './components/BookCreate'
-
-import BookList from './components/BookList' // ***
+import BookList from './components/BookList'
 
 function App() {
   const [books, setBooks] = useState([])
 
-  const createBook = (title) => {
-    const updatedBooks = [...books, { id: new Date().getTime(), title }]
-
+  // ***
+  const deleteBookById = (id) => {
+    const updatedBooks = books.filter((book) => book.id !== id)
     setBooks(updatedBooks)
   }
 
-  // *** render BookList & pass props
+  const createBook = (title) => {
+    const updatedBooks = [...books, { id: new Date().getTime(), title }]
+    setBooks(updatedBooks)
+  }
+
+  // *** pass props
   return (
     <div className='app'>
-      <BookList books={books} />
+      <BookList books={books} onDelete={deleteBookById} />
       <BookCreate onCreate={createBook} />
     </div>
   )
