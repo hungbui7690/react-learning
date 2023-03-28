@@ -1,10 +1,9 @@
 /*
-  Adding Images P1
-  - App.js
-  - BookShow.js
+  Adding Images P2
+  - to make it random > add seed in the link
 
-  (***) https://picsum.photos/300/200
-    > if it displays the same image > go to Network tab and Disable Cache
+  
+  (***) https://picsum.photos/seed/[random]/300/200
 */
 
 import { useState } from 'react'
