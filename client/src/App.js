@@ -1,7 +1,6 @@
 /*
-  Adding Changing or Removing Object Properties
-  - pic
-
+  CheatSheet  
+  > https://state-updates.vercel.app/
 
 */
 
