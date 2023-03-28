@@ -1,7 +1,6 @@
 /*
-  Don't Mutate That State
+  Adding Elements to the Start or End
   - pic
-    > cheatsheet: https://state-updates.vercel.app/
 
 */
 
