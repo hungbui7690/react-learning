@@ -1,7 +1,9 @@
 /*
-  Closing the Form on Submit
+  A Better Solution
   - pic
-    > this is one way to fix > nasty
+
+  - previous solution > we pass 2 event handlers 
+  - better solution is to pass only 1 
 
   - BookShow
 

@@ -9,8 +9,10 @@ const BookShow = ({ book, onDelete, onEdit }) => {
   }
 
   // ***
-  const handleSubmit = () => {
+  const handleSubmit = (id, newTitle) => {
     setShowEdit(false)
+
+    onEdit(id, newTitle) // ***
   }
 
   const handleDeleteClick = () => {
@@ -19,8 +21,8 @@ const BookShow = ({ book, onDelete, onEdit }) => {
 
   let content = <h3>{book.title}</h3>
   if (showEdit) {
-    // *** pass prop
-    content = <BookEdit book={book} onEdit={onEdit} onSubmit={handleSubmit} />
+    // *** remove onEdit
+    content = <BookEdit book={book} onSubmit={handleSubmit} />
   }
 
   return (
