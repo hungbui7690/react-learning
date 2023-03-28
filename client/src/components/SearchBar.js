@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 
 const SearchBar = ({ onSubmit }) => {
-  const [term, setTerm] = useState('') // ***
+  const [term, setTerm] = useState('')
 
   const handleFormSubmit = (e) => {
     e.preventDefault()
 
-    console.log(e) // *** check this to know why we use e.target.value, but not e.currentTarget.value
+    console.log(term)
   }
 
-  // ***
   const handleChange = (e) => {
-    console.log(e.target.value)
+    setTerm(e.target.value) // ***
   }
 
   return (
@@ -19,7 +18,8 @@ const SearchBar = ({ onSubmit }) => {
       <form onSubmit={handleFormSubmit}>
         <input
           type='text'
-          onChange={handleChange} // *** add onChange
+          onChange={handleChange}
+          value={term} // ***
         />
       </form>
     </div>
