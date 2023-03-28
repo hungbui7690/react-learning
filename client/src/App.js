@@ -1,6 +1,10 @@
 /*
-  Deleting Records
+  Toggling Form Display P1
   - pic
+
+  - BookShow.js
+
+  (***) the pencil (edit icon) is made from css 
 
 */
 
@@ -11,7 +15,6 @@ import BookList from './components/BookList'
 function App() {
   const [books, setBooks] = useState([])
 
-  // ***
   const deleteBookById = (id) => {
     const updatedBooks = books.filter((book) => book.id !== id)
     setBooks(updatedBooks)
@@ -22,7 +25,6 @@ function App() {
     setBooks(updatedBooks)
   }
 
-  // *** pass props
   return (
     <div className='app'>
       <BookList books={books} onDelete={deleteBookById} />
