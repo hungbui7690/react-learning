@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-const BookEdit = ({ book }) => {
-  // *** we want when we click on the edit button, the title will be displayed in the input
-  const [title, setTitle] = useState(book.title) // *** default value
+// ***
+const BookEdit = ({ book, onEdit }) => {
+  const [title, setTitle] = useState(book.title)
 
   const handleChange = (e) => {
     setTitle(e.target.value)
@@ -11,7 +11,7 @@ const BookEdit = ({ book }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log('New Title: ', title)
+    onEdit(book.id, title) // *** now it works, but if does not update the showEdit state
   }
 
   return (
