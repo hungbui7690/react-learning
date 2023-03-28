@@ -1,12 +1,10 @@
 /*
-  A Better Solution
-  - pic
+  Adding Images P1
+  - App.js
+  - BookShow.js
 
-  - previous solution > we pass 2 event handlers 
-  - better solution is to pass only 1 
-
-  - BookShow
-
+  (***) https://picsum.photos/300/200
+    > if it displays the same image > go to Network tab and Disable Cache
 */
 
 import { useState } from 'react'
@@ -40,6 +38,7 @@ function App() {
 
   return (
     <div className='app'>
+      <h1>Reading List</h1>
       <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />
       <BookCreate onCreate={createBook} />
     </div>

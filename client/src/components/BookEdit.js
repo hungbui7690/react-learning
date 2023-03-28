@@ -9,7 +9,7 @@ const BookEdit = ({ book, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSubmit(book.id, title) // ***
+    onSubmit(book.id, title)
   }
 
   return (

@@ -8,11 +8,10 @@ const BookShow = ({ book, onDelete, onEdit }) => {
     setShowEdit(!showEdit)
   }
 
-  // ***
   const handleSubmit = (id, newTitle) => {
     setShowEdit(false)
 
-    onEdit(id, newTitle) // ***
+    onEdit(id, newTitle)
   }
 
   const handleDeleteClick = () => {
@@ -21,12 +20,13 @@ const BookShow = ({ book, onDelete, onEdit }) => {
 
   let content = <h3>{book.title}</h3>
   if (showEdit) {
-    // *** remove onEdit
     content = <BookEdit book={book} onSubmit={handleSubmit} />
   }
 
   return (
     <div className='book-show'>
+      {/* *** */}
+      <img src='https://picsum.photos/300/200' alt='books' />
       <div>{content}</div>
       <div className='actions'>
         <button className='edit' onClick={handleEditClick}>
