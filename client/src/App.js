@@ -1,21 +1,28 @@
 /*
-  Reminder on Async/Await P2
+  Communicating the List of Images Down
+  - pic 
 
+  (***) when App component is re-rendered, all other children components will be re-rendered as well
 */
 
+import { useState } from 'react'
 import searchImages from './api'
 import SearchBar from './components/SearchBar'
+import ImageList from './components/ImageList' // ***
 
 function App() {
-  // *** need to use async/await to get back promise result
+  const [images, setImages] = useState([]) // ***
+
   const handleSubmit = async (term) => {
     const result = await searchImages(term)
-    console.log(result) // *** now, we get the data > response.data !== response.data.results
+
+    setImages(result) // ***
   }
 
   return (
     <div>
       <SearchBar onSubmit={handleSubmit} />
+      <ImageList images={images} />
     </div>
   )
 }
