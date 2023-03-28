@@ -1,5 +1,5 @@
 /*
-  Inserting Elements
+  Removing Elements
   - pic
 
 */
