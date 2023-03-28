@@ -1,5 +1,5 @@
 /*
-  Reminder on Async/Await P1
+  Reminder on Async/Await P2
 
 */
 
@@ -7,10 +7,10 @@ import searchImages from './api'
 import SearchBar from './components/SearchBar'
 
 function App() {
-  const handleSubmit = (term) => {
-    // *** return promise
-    const result = searchImages(term)
-    console.log(result) // Promise {<pending>}
+  // *** need to use async/await to get back promise result
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term)
+    console.log(result) // *** now, we get the data > response.data !== response.data.results
   }
 
   return (

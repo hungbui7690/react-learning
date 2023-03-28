@@ -10,7 +10,7 @@ const searchImages = async (term) => {
     },
   })
 
-  return response.data.results
+  return response.data // ***
 }
 
 export default searchImages
