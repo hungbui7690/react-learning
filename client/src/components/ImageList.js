@@ -1,14 +1,12 @@
 import React from 'react'
 import ImageShow from './ImageShow'
 
-// *** extract
 const ImageList = ({ images }) => {
-  // ***
   const renderedImages = images.map((image) => {
+    // *** pass props
     return <ImageShow image={image} />
   })
 
-  // ***
   return <div>{renderedImages}</div>
 }
 

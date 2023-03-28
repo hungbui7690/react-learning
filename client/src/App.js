@@ -1,8 +1,7 @@
 /*
-  Building a List of Images
+  Handling List Updates
   - pic
-  - ImageList  
-  - ImageShow
+    > understand why we need the key props & and why we see the warning unique key props
 
 */
 
@@ -22,8 +21,6 @@ function App() {
   return (
     <div>
       <SearchBar onSubmit={handleSubmit} />
-
-      {/* *** */}
       <ImageList images={images} />
     </div>
   )
