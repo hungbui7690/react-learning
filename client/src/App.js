@@ -1,7 +1,6 @@
 /*
-  Introducing useEffect
+  useEffect in Action
   - pic
-  - App.js
 
 */
 
@@ -18,7 +17,6 @@ function App() {
     setBooks(response.data)
   }
 
-  // ***
   useEffect(() => {
     fetchBooks()
   }, [])
