@@ -1,6 +1,6 @@
-// ***
-const Button = ({ text }) => {
-  return <button>{text}</button>
+// *** special prop
+const Button = ({ children }) => {
+  return <button>{children}</button>
 }
 
 export default Button

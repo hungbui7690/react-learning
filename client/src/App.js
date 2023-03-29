@@ -1,5 +1,6 @@
 /*
-  The Children Prop P1
+  The Children Prop P2
+  - pic
   
 */
 
@@ -8,14 +9,10 @@ import Button from './Button'
 function App() {
   return (
     <div>
-      {/* *** pass props */}
-      <div>
-        <Button text='Click Here!' />
-      </div>
-
-      {/* *** some people prefer to put text in between the tags > not passing props  */}
       <div>
         <Button>Click Me!</Button>
+        <Button>Buy Now!</Button>
+        <Button>See Deal!</Button>
       </div>
     </div>
   )
