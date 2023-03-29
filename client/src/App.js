@@ -1,5 +1,6 @@
 /*
-  Deleting a Record
+  Introducing Context
+  - pic
 
 */
 
@@ -34,9 +35,8 @@ function App() {
     setBooks(updatedBooks)
   }
 
-  // *** keep the old one, add need method to talk to API
   const deleteBookById = async (id) => {
-    await axios.delete('http://localhost:3001/books/' + id) // ***
+    await axios.delete('http://localhost:3001/books/' + id)
 
     const updatedBooks = books.filter((book) => book.id !== id)
     setBooks(updatedBooks)
