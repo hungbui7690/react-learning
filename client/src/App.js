@@ -1,5 +1,5 @@
 /*
-  Understanding the Issue
+  Applying the Fix
   - pic
   
   
@@ -16,7 +16,7 @@ function App() {
     document.body.onclick = () => {
       console.log(counter)
     }
-  }, [])
+  }, [counter]) // *** the warning says that we need to add counter here
 
   return (
     <div>
