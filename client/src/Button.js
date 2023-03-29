@@ -10,7 +10,6 @@ const Button = ({
   outline,
   rounded,
 }) => {
-  // *** add some more default class names
   const classes = classnames('px-3 py-1.5 m-1.5 border flex items-center ', {
     'border-blue-500 bg-blue-500 text-white': primary,
     'border-gray-500 bg-gray-700 text-white': secondary,

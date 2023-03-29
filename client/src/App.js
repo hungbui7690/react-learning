@@ -1,8 +1,10 @@
 /*
-  Using Icons in React Projects P2
+  Using Icons in React Projects P3
   - Button.js
 
-  - fix gap
+  - we don't want to add mr-2 to all components > write global css 
+    > index.css
+
 */
 
 import Button from './Button'
@@ -14,7 +16,7 @@ function App() {
     <div>
       <div>
         <Button primary rounded>
-          <GoBell className='mr-2' /> Click Me!
+          <GoBell /> Click Me!
         </Button>
         <Button secondary>
           <GoComment /> Click Me!
