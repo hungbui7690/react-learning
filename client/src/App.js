@@ -1,5 +1,5 @@
 /*
-  Finding the Expanded Item P2
+  Conditional Rendering
   - Accordion.js
 
 */
