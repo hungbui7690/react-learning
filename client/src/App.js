@@ -1,6 +1,6 @@
 /*
-  How the API Works
-  - pic 
+  Introducing the REST Client
+  - pic
 
 */
 
