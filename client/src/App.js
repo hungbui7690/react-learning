@@ -1,8 +1,7 @@
 /*
-  More on Changing Context
-  - context/books.js
-  - index.js
-  - BookList.js
+  Application vs Component State
+  - we need to learn how to decide which states that we need to share through entire app
+  - pic
 
 */
 
