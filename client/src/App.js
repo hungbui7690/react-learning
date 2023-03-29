@@ -1,5 +1,5 @@
 /*
-  The ClassNames Library P3
+  Building Some Variations
 
 */
 
@@ -10,9 +10,10 @@ function App() {
     <div>
       <div>
         <Button primary>Click Me!</Button>
-        <div>
-          <Button success>Buy Now!</Button>
-        </div>
+        <Button secondary>Click Me!</Button>
+        <Button success>Buy Now!</Button>
+        <Button warning>Buy Now!</Button>
+        <Button danger>Buy Now!</Button>
       </div>
     </div>
   )

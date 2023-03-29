@@ -1,13 +1,5 @@
 import classnames from 'classnames'
 
-// *** add px-1.5 > can combine string with object
-const finalClassName = classnames('px-1.5', {
-  'bg-blue-500': true,
-  'text-yellow': false,
-})
-
-console.log(finalClassName)
-
 const Button = ({
   children,
   primary,
@@ -18,11 +10,17 @@ const Button = ({
   outline,
   rounded,
 }) => {
-  return (
-    <button className='px-3 m-2 py-1.5 border-blue-600 bg-blue-500 text-white'>
-      {children}
-    </button>
-  )
+  // ***
+  const classes = classnames('px-3 py-1.5 m-1.5 border', {
+    'border-blue-500 bg-blue-500 text-white': primary, // only apply these classes when primary = true
+    'border-gray-500 bg-gray-700 text-white': secondary,
+    'border-green-500 bg-green-700 text-white': success,
+    'border-yellow-500 bg-yellow-600 text-white': warning,
+    'border-red-500 bg-red-700 text-white': danger,
+  })
+
+  // ***
+  return <button className={classes}>{children}</button>
 }
 
 export default Button
