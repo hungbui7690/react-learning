@@ -1,22 +1,25 @@
 /*
-  Return to useEffect P1
-  - VsCode Console > Warning
-    > React Hook useEffect has a missing dependency: 'fetchBooks'
-  - pic
+  Return to useEffect P2
 
-  - App.js only
-    > we want to click on the anywhere on the screen and show we want to show the "counter"
+  - the code below only works on codesanbox
+    > https://codesandbox.io/s/hungry-fog-0ev1ec
 
 */
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [counter, setCounter] = useState(0)
 
-  // *** try > it just works when we click the top part of the page
+  // *** DON'T DO THIS
+  useEffect(() => {
+    document.body.onclick = () => {
+      console.log('Hello')
+    }
+  }, [])
+
   return (
-    <div onClick={() => console.log('Hello')}>
+    <div>
       <button onClick={() => setCounter(counter + 1)}>+ Increment</button>
       <div>Count: {counter}</div>
     </div>
