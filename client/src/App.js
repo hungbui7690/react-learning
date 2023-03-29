@@ -1,29 +1,33 @@
 /*
-  Component Overview
-  - pic
+  Component Setup
+  - create components/Accordion.js
 
 */
 
-import Button from './components/Button'
-import { GoBell } from 'react-icons/go'
+import Accordion from './components/Accordion'
 
 function App() {
-  const handleClick = () => {
-    console.log('click!!!')
-  }
+  // ***
+  const items = [
+    {
+      label: 'Item #1',
+      content:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse odit modi, veniam quisquam voluptatibus obcaecati molestiae facilis debitis maxime doloribus iste, dignissimos explicabo at tenetur, commodi eaque neque nisi unde!',
+    },
+    {
+      label: 'Item #2',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, temporibus.',
+    },
+    {
+      label: 'Item #3',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iusto, nam doloremque natus reprehenderit facilis?',
+    },
+  ]
 
-  return (
-    <div>
-      <div>
-        <Button primary rounded className='mb-5' onClick={handleClick}>
-          <GoBell /> Click Me!
-        </Button>
-        <Button secondary onMouseOver={handleClick}>
-          Add to Cart
-        </Button>
-      </div>
-    </div>
-  )
+  // *** pass props
+  return <Accordion items={items} />
 }
 
 export default App
