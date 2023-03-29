@@ -1,6 +1,6 @@
 /*
-  useEffect in Action
-  - pic
+  More on useEffect
+  - index.js only
 
 */
 
