@@ -1,8 +1,13 @@
 /*
-  PropTypes in Action P1
-  - Button.js
+  PropTypes in Action P2 (***)
+  - turn true/false/undefined into number
+    - Number(true) = 1
+    - Number(undefined) = NaN
+    - Number(!!undefined) = 0
+    - !!undefined = false 
 
-  - we will use custom validators
+  *** prop-types does not show error, it just show WARNING
+    > nowadays, TS can do this for us
 
 */
 
@@ -15,11 +20,8 @@ function App() {
         <Button success rounded outline>
           Click Me!
         </Button>
-        <Button danger outline>
+        <Button primary danger outline>
           Buy Now!
-        </Button>
-        <Button secondary rounded>
-          See Deal!
         </Button>
       </div>
     </div>
