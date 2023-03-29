@@ -1,5 +1,5 @@
 /*
-  The Children Prop P2
+  Props Design
   - pic
   
 */
@@ -7,12 +7,19 @@
 import Button from './Button'
 
 function App() {
+  // *** should design like below
   return (
     <div>
       <div>
-        <Button>Click Me!</Button>
-        <Button>Buy Now!</Button>
-        <Button>See Deal!</Button>
+        <Button success rounded outline>
+          Click Me!
+        </Button>
+        <Button danger outline>
+          Buy Now!
+        </Button>
+        <Button secondary rounded>
+          See Deal!
+        </Button>
       </div>
     </div>
   )
