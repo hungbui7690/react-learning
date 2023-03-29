@@ -1,11 +1,36 @@
 /*
-  Some Button Theory
-  - pic
+  Underlying Elements
+  - pic (***)
+
+  - create Button.js
 
 */
 
+import Button from './Button'
+
 function App() {
-  return <div className='App'>App</div>
+  return (
+    <div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+    </div>
+  )
 }
 
 export default App
