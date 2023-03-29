@@ -1,23 +1,18 @@
 /*
-  Using the REST Client
+  Creating a New Record P1
   - pic
-  - create api.http
-    > separated requests by ###
-    > when we use post request to add data > data will be added to db.json > just need to provide "title", id will be generated automatically
 
-///////////////////////////////
+  > npm install axios
 
-  *** ERROR: 
-    "The connection was rejected. Either the requested service isn’t running on the requested server/port, the proxy settings in vscode are misconfigured, or a firewall is blocking requests. Details: RequestError: connect ECONNREFUSED 127.0.0.1:3001"
-
-  Fix: 
-    "server" : "json-server --port 3001 --watch db.json --host 127.0.0.1"
-
+  - App.js
+  
+  (***) test in Network tab + console log + db.json
 */
 
 import { useState } from 'react'
 import BookCreate from './components/BookCreate'
 import BookList from './components/BookList'
+import axios from 'axios'
 
 function App() {
   const [books, setBooks] = useState([])
@@ -39,9 +34,12 @@ function App() {
     setBooks(updatedBooks)
   }
 
-  const createBook = (title) => {
-    const updatedBooks = [...books, { id: new Date().getTime(), title }]
-    setBooks(updatedBooks)
+  const createBook = async (title) => {
+    // ***
+    const response = await axios.post('http://localhost:3001/books', {
+      title,
+    })
+    console.log(response)
   }
 
   return (
