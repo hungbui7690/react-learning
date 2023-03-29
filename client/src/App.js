@@ -1,10 +1,6 @@
 /*
-  Refactoring with Organization
-  - create components/ + pages/
-
-  - create ButtonPage.js 
-    > from App.js
-    > fix the import
+  Component Overview
+  - pic
 
 */
 
