@@ -1,20 +1,20 @@
 /*
-  Using Icons in React Projects P1
-  - https://react-icons.github.io/react-icons/
+  Using Icons in React Projects P2
+  - Button.js
 
-  *** we can see that the button displays the icon incorrectly > fix in next lesson
+  - fix gap
 */
 
 import Button from './Button'
-import { GoBell, GoComment } from 'react-icons/go' // ***
+import { GoBell, GoComment } from 'react-icons/go'
 
 function App() {
-  // *** use like normal component
+  // *** we can also add here
   return (
     <div>
       <div>
         <Button primary rounded>
-          <GoBell /> Click Me!
+          <GoBell className='mr-2' /> Click Me!
         </Button>
         <Button secondary>
           <GoComment /> Click Me!
