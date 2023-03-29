@@ -1,8 +1,5 @@
 /*
-  useEffect Cleanup Functions P2
-  - pic
-
-  > https://codesandbox.io/s/hungry-fog-0ev1ec
+  The Purpose of Cleanup Functions P1
 
 */
 
@@ -12,6 +9,7 @@ function App() {
   const [counter, setCounter] = useState(0)
 
   useEffect(() => {
+    // *** This is the bad way to setup click event > because with this setup, we just can have 1 event listener at body at a time
     document.body.onclick = () => {
       console.log(counter)
     }
@@ -21,7 +19,7 @@ function App() {
     }
 
     return cleanUp
-  }, []) // *** remove counter here > run once
+  }, [counter])
 
   return (
     <div>
