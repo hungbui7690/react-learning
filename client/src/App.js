@@ -1,6 +1,6 @@
 /*
-  State Design Process Overview ***
-  - pic
+  Finding the Expanded Item P1
+  - Accordion.js
 
 */
 
