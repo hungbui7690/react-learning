@@ -1,6 +1,5 @@
 /*
-  Updating a Record P2
-  - we need to use the response data then update
+  Deleting a Record
 
 */
 
@@ -26,18 +25,19 @@ function App() {
       title: newTitle,
     })
 
-    // ***
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
-        return { ...book, ...response.data } // *** this line is SUPER IMPORTANT
+        return { ...book, ...response.data }
       }
       return book
     })
-
     setBooks(updatedBooks)
   }
 
-  const deleteBookById = (id) => {
+  // *** keep the old one, add need method to talk to API
+  const deleteBookById = async (id) => {
+    await axios.delete('http://localhost:3001/books/' + id) // ***
+
     const updatedBooks = books.filter((book) => book.id !== id)
     setBooks(updatedBooks)
   }
