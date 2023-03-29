@@ -1,8 +1,6 @@
 /*
-  Context in Action
-  - create context/books.js
-  - index.js > import and nest
-  - BookList.js > consume
+  Changing Context Values (***)
+  - pic
 
 */
 
