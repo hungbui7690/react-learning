@@ -1,11 +1,8 @@
 /*
-  Validating Props with PropTypes
-  - pic
-  - prop-types > use the validate the props user enters is correct or not 
-    > npm i prop-types
+  PropTypes in Action P1
+  - Button.js
 
-  - we also want user just can enter either one of the variations: 
-    + primary, secondary, success, error, warning...
+  - we will use custom validators
 
 */
 
