@@ -1,6 +1,6 @@
 /*
-  More on useEffect
-  - index.js only
+  Updating a Record P1
+  - pic > understand why data might be outdate
 
 */
 
@@ -21,14 +21,13 @@ function App() {
     fetchBooks()
   }, [])
 
-  const editBookById = (id, newTitle) => {
-    const updatedBooks = books.map((book) => {
-      if (book.id === id) {
-        return { ...book, title: newTitle }
-      }
-      return book
+  // ***
+  const editBookById = async (id, newTitle) => {
+    const response = await axios.put('http://localhost:3001/books/' + id, {
+      title: newTitle,
     })
-    setBooks(updatedBooks)
+
+    console.log(response)
   }
 
   const deleteBookById = (id) => {
