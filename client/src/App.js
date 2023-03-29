@@ -1,8 +1,7 @@
 /*
-  useEffect Cleanup Functions P1
+  useEffect Cleanup Functions P2
   - pic
 
-  copy code to link below to test
   > https://codesandbox.io/s/hungry-fog-0ev1ec
 
 */
@@ -12,7 +11,6 @@ import { useEffect, useState } from 'react'
 function App() {
   const [counter, setCounter] = useState(0)
 
-  // *** return function > everytime counter changes > return new function
   useEffect(() => {
     document.body.onclick = () => {
       console.log(counter)
@@ -23,7 +21,7 @@ function App() {
     }
 
     return cleanUp
-  }, [counter])
+  }, []) // *** remove counter here > run once
 
   return (
     <div>
