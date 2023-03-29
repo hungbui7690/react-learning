@@ -1,5 +1,5 @@
 /*
-  Creating a New Record P2
+  Fetching a List of Records
   - App.js
 
 */
@@ -12,15 +12,22 @@ import axios from 'axios'
 function App() {
   const [books, setBooks] = useState([])
 
+  // ***
+  const fetchBooks = async () => {
+    const response = await axios.get('http://localhost:3001/books')
+    setBooks(response.data)
+  }
+
+  // *** DON'T DO THIS
+  // fetchBooks()
+
   const editBookById = (id, newTitle) => {
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
         return { ...book, title: newTitle }
       }
-
       return book
     })
-
     setBooks(updatedBooks)
   }
 
@@ -33,8 +40,6 @@ function App() {
     const response = await axios.post('http://localhost:3001/books', {
       title,
     })
-
-    // ***
     const updatedBooks = [...books, response.data]
     setBooks(updatedBooks)
   }
