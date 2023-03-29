@@ -9,6 +9,7 @@ const Button = ({
   danger,
   outline,
   rounded,
+  onClick, // ***
 }) => {
   const classes = classnames('px-3 py-1.5 m-1.5 border flex items-center ', {
     'border-blue-500 bg-blue-500 text-white': primary,
@@ -19,8 +20,14 @@ const Button = ({
     'rounded-full': rounded,
   })
 
-  // ***
-  return <button className={classes}>{children}</button>
+  return (
+    <button
+      onClick={onClick} // *** it still works
+      className={classes}
+    >
+      {children}
+    </button>
+  )
 }
 
 export default Button
