@@ -1,6 +1,6 @@
 /*
-  Reminder on Building Lists
-  - create components/Accordion.js
+  State Design Process Overview ***
+  - pic
 
 */
 
