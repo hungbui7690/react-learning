@@ -1,19 +1,18 @@
 /*
-  Issues with Event Handlers P1
-  - pic
+  Issues with Event Handlers P2
+  - pic: continue with pic 6
+
 
 */
 
 import Button from './Button'
-import { GoBell, GoComment } from 'react-icons/go'
+import { GoBell } from 'react-icons/go'
 
 function App() {
-  // ***
   const handleClick = () => {
     console.log('click!!!')
   }
 
-  // *** pass onClick
   return (
     <div>
       <div>
