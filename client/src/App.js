@@ -1,23 +1,7 @@
 /*
-  JSON Server Setup
-  - pic
-
-  - we need to have 2 terminals:
-    + react
-    + json server
-
+  What Just Happened
+  - pic 
   
-  (1)
-  > npm install json-server
-  
-  (2)
-  - create db.json
-
-  (3)
-  - package.json
-    > create server command
-    > npm run server
-
 */
 
 import { useState } from 'react'
