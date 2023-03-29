@@ -1,9 +1,9 @@
 /*
-  The ClassNames Library P1
+  The ClassNames Library P2
   - pic
-
-  - instead of doing like in Button.js, we use library to make it easier and less tedious
-
+  - classnames library 
+    > help us build class names easily
+    > npm i classnames
 */
 
 import Button from './Button'
