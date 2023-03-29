@@ -1,6 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import BooksContext from '../context/books'
 
-const BookCreate = ({ onCreate }) => {
+const BookCreate = () => {
+  // *** we can rename here, or rename below
+  const { createBook: onCreate } = useContext(BooksContext)
+
   const [title, setTitle] = useState('')
 
   const handleChange = (e) => {

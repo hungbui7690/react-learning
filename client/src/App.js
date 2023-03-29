@@ -1,9 +1,16 @@
 /*
-  Refactoring the App
-  - pic
-  - cut from App.js to context/
+  Refactor The Rest
+  - context/books.js
+    > put all items in object to make the code more organized
 
-  *** App still cannot work > need to fix in later lessons
+  - Refactor the rest: 
+    + BookCreate.js
+    + BookShow.js
+    + BookList.js
+    + BookEdit.js
+
+
+  *** we can see that we used context & props together (BookShow.js)
 
 */
 
@@ -13,14 +20,12 @@ import BookList from './components/BookList'
 import BooksContext from './context/books'
 
 function App() {
-  // ***
   const { fetchBooks } = useContext(BooksContext)
 
   useEffect(() => {
     fetchBooks()
   }, [])
 
-  // *** remove props pass
   return (
     <div className='app'>
       <h1>Reading List</h1>

@@ -4,16 +4,13 @@ import axios from 'axios'
 const BooksContext = createContext()
 
 function Provider({ children }) {
-  // ***
   const [books, setBooks] = useState([])
 
-  // ***
   const fetchBooks = async () => {
     const response = await axios.get('http://localhost:3001/books')
     setBooks(response.data)
   }
 
-  // ***
   const editBookById = async (id, newTitle) => {
     const response = await axios.put('http://localhost:3001/books/' + id, {
       title: newTitle,
@@ -27,7 +24,6 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  // ***
   const deleteBookById = async (id) => {
     await axios.delete('http://localhost:3001/books/' + id)
 
@@ -35,7 +31,6 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  // ***
   const createBook = async (title) => {
     const response = await axios.post('http://localhost:3001/books', {
       title,
@@ -44,9 +39,18 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  // *** pass to value
+  // ***
+  const valuesToShare = {
+    books,
+    deleteBookById,
+    editBookById,
+    createBook,
+    fetchBooks,
+  }
+
+  // ***
   return (
-    <BooksContext.Provider value={{ fetchBooks }}>
+    <BooksContext.Provider value={valuesToShare}>
       {children}
     </BooksContext.Provider>
   )

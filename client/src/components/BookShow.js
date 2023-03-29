@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import { useContext, useState } from 'react'
+import BooksContext from '../context/books'
 import BookEdit from './BookEdit'
 
-const BookShow = ({ book, onDelete, onEdit }) => {
+// *** we use props & context together
+const BookShow = ({ book }) => {
+  // ***
+  const { deleteBookById: onDelete, editBookById: onEdit } =
+    useContext(BooksContext)
+
   const [showEdit, setShowEdit] = useState(false)
 
   const handleEditClick = () => {
