@@ -1,10 +1,6 @@
 /*
-  ESLint is Good but be Careful
-  - we add the fix to our app
-    > first glance > our app works fine
-    > but if we check network tab > requests was sent continuously
-    > why > pic
-  
+  Stable References with useCallback
+  - pic
 
   *** https://codesandbox.io/s/hungry-fog-0ev1ec
 
@@ -20,7 +16,7 @@ function App() {
 
   useEffect(() => {
     fetchBooks()
-  }, [fetchBooks]) // *** we add the fix here
+  }, [])
 
   return (
     <div className='app'>
