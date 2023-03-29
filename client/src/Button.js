@@ -10,8 +10,12 @@ const Button = ({
   outline,
   rounded,
 }) => {
-  // *** add class name
-  return <button className='bg-blue-900 text-white'>{children}</button>
+  // *** primary button > warning: yellow > success: green
+  return (
+    <button className='px-3 m-2 py-1.5 border-blue-600 bg-blue-500 text-white'>
+      {children}
+    </button>
+  )
 }
 
 Button.propTypes = {

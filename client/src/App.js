@@ -1,5 +1,5 @@
 /*
-  How to use Tailwind
+  Review on Styling
   - pic
 
   - Button.js
@@ -14,9 +14,11 @@ function App() {
         <Button success rounded outline>
           Click Me!
         </Button>
-        <Button danger outline>
-          Buy Now!
-        </Button>
+        <div>
+          <Button danger outline>
+            Buy Now!
+          </Button>
+        </div>
       </div>
     </div>
   )
