@@ -1,28 +1,34 @@
 /*
-  Fixing Bugs with useCallback P2
-  - context/books.js
-  
-  *** after fixing, check network tab to verify
-    
+  useEffect Cleanup Functions P1
+  - pic
+
+  copy code to link below to test
+  > https://codesandbox.io/s/hungry-fog-0ev1ec
+
 */
 
-import { useEffect } from 'react'
-import BookCreate from './components/BookCreate'
-import BookList from './components/BookList'
-import { useBooksContext } from './hooks/use-books-context'
+import { useEffect, useState } from 'react'
 
 function App() {
-  const { fetchBooks } = useBooksContext()
+  const [counter, setCounter] = useState(0)
 
+  // *** return function > everytime counter changes > return new function
   useEffect(() => {
-    fetchBooks()
-  }, [fetchBooks]) // *** put fetchBooks in the dep list
+    document.body.onclick = () => {
+      console.log(counter)
+    }
+
+    const cleanUp = () => {
+      console.log('cleanup')
+    }
+
+    return cleanUp
+  }, [counter])
 
   return (
-    <div className='app'>
-      <h1>Reading List</h1>
-      <BookList />
-      <BookCreate />
+    <div>
+      <button onClick={() => setCounter(counter + 1)}>+ Increment</button>
+      <div>Count: {counter}</div>
     </div>
   )
 }
