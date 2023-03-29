@@ -1,26 +1,20 @@
 /*
-  Refactor The Rest
-  - context/books.js
-    > put all items in object to make the code more organized
-
-  - Refactor the rest: 
-    + BookCreate.js
-    + BookShow.js
-    + BookList.js
-    + BookEdit.js
-
-
-  *** we can see that we used context & props together (BookShow.js)
+  A Small Taste of Reusable Hooks
+  - pic
+  
+  - create hooks/use-books-context.js
+    > export
+  - import and use
 
 */
 
-import { useContext, useEffect } from 'react'
+import { useEffect } from 'react'
 import BookCreate from './components/BookCreate'
 import BookList from './components/BookList'
-import BooksContext from './context/books'
+import { useBooksContext } from './hooks/use-books-context' // ***
 
 function App() {
-  const { fetchBooks } = useContext(BooksContext)
+  const { fetchBooks } = useBooksContext() // ***
 
   useEffect(() => {
     fetchBooks()
