@@ -1,13 +1,13 @@
 import React from 'react'
 import BookShow from './BookShow'
-import { useBooksContext } from '../hooks/use-books-context' // ***
+import { useBooksContext } from '../hooks/use-books-context'
 
 const BookList = () => {
   const {
     books,
     deleteBookById: onDelete,
     editBookById: onEdit,
-  } = useBooksContext() // ***
+  } = useBooksContext()
 
   const renderedBooks = books.map((book) => {
     return (

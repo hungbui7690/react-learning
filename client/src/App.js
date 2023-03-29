@@ -1,30 +1,24 @@
 /*
-  A Small Taste of Reusable Hooks
+  Return to useEffect P1
+  - VsCode Console > Warning
+    > React Hook useEffect has a missing dependency: 'fetchBooks'
   - pic
-  
-  - create hooks/use-books-context.js
-    > export
-  - import and use
+
+  - App.js only
+    > we want to click on the anywhere on the screen and show we want to show the "counter"
 
 */
 
-import { useEffect } from 'react'
-import BookCreate from './components/BookCreate'
-import BookList from './components/BookList'
-import { useBooksContext } from './hooks/use-books-context' // ***
+import { useState } from 'react'
 
 function App() {
-  const { fetchBooks } = useBooksContext() // ***
+  const [counter, setCounter] = useState(0)
 
-  useEffect(() => {
-    fetchBooks()
-  }, [])
-
+  // *** try > it just works when we click the top part of the page
   return (
-    <div className='app'>
-      <h1>Reading List</h1>
-      <BookList />
-      <BookCreate />
+    <div onClick={() => console.log('Hello')}>
+      <button onClick={() => setCounter(counter + 1)}>+ Increment</button>
+      <div>Count: {counter}</div>
     </div>
   )
 }
