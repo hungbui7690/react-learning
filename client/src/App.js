@@ -1,12 +1,7 @@
 /*
-  Creating a New Record P1
-  - pic
-
-  > npm install axios
-
+  Creating a New Record P2
   - App.js
-  
-  (***) test in Network tab + console log + db.json
+
 */
 
 import { useState } from 'react'
@@ -35,11 +30,13 @@ function App() {
   }
 
   const createBook = async (title) => {
-    // ***
     const response = await axios.post('http://localhost:3001/books', {
       title,
     })
-    console.log(response)
+
+    // ***
+    const updatedBooks = [...books, response.data]
+    setBooks(updatedBooks)
   }
 
   return (
