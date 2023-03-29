@@ -1,9 +1,8 @@
 /*
-  Stable References with useCallback
-  - pic
-
-  *** https://codesandbox.io/s/hungry-fog-0ev1ec
-
+  Fixing Bugs with useCallback P1
+  - context/books.js
+    > this is one way to write, but not use too much
+    
 */
 
 import { useEffect } from 'react'
