@@ -15,7 +15,6 @@ const Button = ({
 
 Button.propTypes = {
   checkVariationValue: ({ primary, secondary, success, warning, danger }) => {
-    // ***
     const count =
       Number(!!primary) +
       Number(!!secondary) +
