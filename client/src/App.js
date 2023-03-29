@@ -1,9 +1,6 @@
 /*
-  Underlying Elements
-  - pic (***)
-
-  - create Button.js
-
+  The Children Prop P1
+  
 */
 
 import Button from './Button'
@@ -11,23 +8,14 @@ import Button from './Button'
 function App() {
   return (
     <div>
+      {/* *** pass props */}
       <div>
-        <Button />
+        <Button text='Click Here!' />
       </div>
+
+      {/* *** some people prefer to put text in between the tags > not passing props  */}
       <div>
-        <Button />
-      </div>
-      <div>
-        <Button />
-      </div>
-      <div>
-        <Button />
-      </div>
-      <div>
-        <Button />
-      </div>
-      <div>
-        <Button />
+        <Button>Click Me!</Button>
       </div>
     </div>
   )
