@@ -1,6 +1,6 @@
 /*
-  Passing Props Through ***
-  - use rest & spread operator
+  Handling the Special ClassName Case
+  - pic
 
 */
 
@@ -12,20 +12,14 @@ function App() {
     console.log('click!!!')
   }
 
+  // *** we add className="mb-5" > we don't see any change
   return (
     <div>
       <div>
-        <Button
-          primary
-          rounded
-          onClick={handleClick} // ***
-        >
+        <Button primary rounded className='mb-5' onClick={handleClick}>
           <GoBell /> Click Me!
         </Button>
-        <Button
-          secondary
-          onMouseOver={handleClick} // ***
-        >
+        <Button secondary onMouseOver={handleClick}>
           Add to Cart
         </Button>
       </div>
