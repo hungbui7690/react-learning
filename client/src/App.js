@@ -1,7 +1,6 @@
 /*
-  Issues with Event Handlers P2
-  - pic: continue with pic 6
-
+  Passing Props Through ***
+  - use rest & spread operator
 
 */
 
@@ -16,8 +15,18 @@ function App() {
   return (
     <div>
       <div>
-        <Button primary rounded onClick={handleClick}>
+        <Button
+          primary
+          rounded
+          onClick={handleClick} // ***
+        >
           <GoBell /> Click Me!
+        </Button>
+        <Button
+          secondary
+          onMouseOver={handleClick} // ***
+        >
+          Add to Cart
         </Button>
       </div>
     </div>
