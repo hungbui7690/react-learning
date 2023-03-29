@@ -10,7 +10,6 @@ const Button = ({
   rounded,
   ...rest
 }) => {
-  // *** need to put it here
   const classes = classnames(
     rest.className,
     'px-3 py-1.5 m-1.5 border flex items-center ',

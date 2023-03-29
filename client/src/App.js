@@ -1,5 +1,5 @@
 /*
-  Handling the Special ClassName Case
+  Project Organization
   - pic
 
 */
@@ -12,7 +12,6 @@ function App() {
     console.log('click!!!')
   }
 
-  // *** we add className="mb-5" > we don't see any change
   return (
     <div>
       <div>
