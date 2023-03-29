@@ -1,5 +1,5 @@
 /*
-  Finding the Expanded Item P1
+  Finding the Expanded Item P2
   - Accordion.js
 
 */

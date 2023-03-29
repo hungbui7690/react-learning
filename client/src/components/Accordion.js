@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 
 const Accordion = ({ items }) => {
-  const [expandedIndex, setExpandedIndex] = useState(0) // ***
+  const [expandedIndex, setExpandedIndex] = useState(0)
 
-  const renderedItems = items.map((item) => {
+  const renderedItems = items.map((item, index) => {
     // ***
-    if (expandedIndex) {
-      console.log('expanded')
-    } else {
-      console.log('collapsed')
-    }
+    const isExpanded = index === expandedIndex
+    console.log(isExpanded)
 
     return (
       <div key={item.id}>
