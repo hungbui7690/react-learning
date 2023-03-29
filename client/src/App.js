@@ -1,7 +1,7 @@
 /*
-  What Just Happened
+  How the API Works
   - pic 
-  
+
 */
 
 import { useState } from 'react'
