@@ -1,6 +1,6 @@
 /*
-  Updating a Record P1
-  - pic > understand why data might be outdate
+  Updating a Record P2
+  - we need to use the response data then update
 
 */
 
@@ -21,13 +21,20 @@ function App() {
     fetchBooks()
   }, [])
 
-  // ***
   const editBookById = async (id, newTitle) => {
     const response = await axios.put('http://localhost:3001/books/' + id, {
       title: newTitle,
     })
 
-    console.log(response)
+    // ***
+    const updatedBooks = books.map((book) => {
+      if (book.id === id) {
+        return { ...book, ...response.data } // *** this line is SUPER IMPORTANT
+      }
+      return book
+    })
+
+    setBooks(updatedBooks)
   }
 
   const deleteBookById = (id) => {
