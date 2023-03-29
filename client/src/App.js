@@ -1,6 +1,17 @@
 /*
-  Introducing the REST Client
+  Using the REST Client
   - pic
+  - create api.http
+    > separated requests by ###
+    > when we use post request to add data > data will be added to db.json > just need to provide "title", id will be generated automatically
+
+///////////////////////////////
+
+  *** ERROR: 
+    "The connection was rejected. Either the requested service isn’t running on the requested server/port, the proxy settings in vscode are misconfigured, or a firewall is blocking requests. Details: RequestError: connect ECONNREFUSED 127.0.0.1:3001"
+
+  Fix: 
+    "server" : "json-server --port 3001 --watch db.json --host 127.0.0.1"
 
 */
 
