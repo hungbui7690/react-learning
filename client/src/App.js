@@ -1,11 +1,10 @@
 /*
-  The Purpose of Cleanup Functions P2
-  - setup this way, we can work on local
-  - create problem:
-    + click once on the button
-    + click anywhere else > log 0 and 1
+  The Purpose of Cleanup Functions P3
+  - pic 
+  - below, we setup cleanup function to remove event listener
+  - click on the top part of the page
 
-  *** everytime we click on the button, we create a brand NEW event listener > fix in next lesson
+  *** side note: actually, the previous code that we need to work on codesandbox can works locally > reason it does not work because the document.body is just the top part > check in inspection
 
 */
 
@@ -15,14 +14,14 @@ function App() {
   const [counter, setCounter] = useState(0)
 
   useEffect(() => {
-    // ***
     const listener = () => {
       console.log(counter)
     }
-    document.addEventListener('click', listener)
+    document.body.addEventListener('click', listener)
 
+    // *** normally, we don't write like this (not create function and return) > but return function directly
     const cleanUp = () => {
-      console.log('cleanup')
+      document.body.removeEventListener('click', listener)
     }
 
     return cleanUp
