@@ -1,7 +1,8 @@
 /*
-  Application vs Component State
-  - we need to learn how to decide which states that we need to share through entire app
-  - pic
+  Refactoring to Use Context
+  - remove to old valuesToShare code
+    > context/book.js 
+    > BookList.js
 
 */
 
