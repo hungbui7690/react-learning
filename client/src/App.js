@@ -1,5 +1,6 @@
 /*
-  Conditional Rendering
+  Inline Event Handlers
+  - pic
   - Accordion.js
 
 */
