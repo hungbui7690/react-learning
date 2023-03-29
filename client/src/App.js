@@ -1,7 +1,8 @@
 /*
-  Fixing Bugs with useCallback P1
+  Fixing Bugs with useCallback P2
   - context/books.js
-    > this is one way to write, but not use too much
+  
+  *** after fixing, check network tab to verify
     
 */
 
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     fetchBooks()
-  }, [])
+  }, [fetchBooks]) // *** put fetchBooks in the dep list
 
   return (
     <div className='app'>

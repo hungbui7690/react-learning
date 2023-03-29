@@ -6,13 +6,11 @@ const BooksContext = createContext()
 function Provider({ children }) {
   const [books, setBooks] = useState([])
 
-  const fetchBooks = async () => {
+  // *** this is the normal way to write this
+  const fetchBooks = useCallback(async () => {
     const response = await axios.get('http://localhost:3001/books')
     setBooks(response.data)
-  }
-
-  // ***
-  const stableFetchBooks = useCallback(fetchBooks, [])
+  }, [])
 
   const editBookById = async (id, newTitle) => {
     const response = await axios.put('http://localhost:3001/books/' + id, {
@@ -42,14 +40,12 @@ function Provider({ children }) {
     setBooks(updatedBooks)
   }
 
-  // ***
   const valuesToShare = {
     books,
     deleteBookById,
     editBookById,
     createBook,
     fetchBooks,
-    stableFetchBooks, // ***
   }
 
   return (
