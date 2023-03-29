@@ -1,9 +1,6 @@
 /*
-  The ClassNames Library P2
-  - pic
-  - classnames library 
-    > help us build class names easily
-    > npm i classnames
+  The ClassNames Library P3
+
 */
 
 import Button from './Button'

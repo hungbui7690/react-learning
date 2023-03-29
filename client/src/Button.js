@@ -1,9 +1,9 @@
-import classnames from 'classnames' // ***
+import classnames from 'classnames'
 
-// ***
-const finalClassName = classnames({
+// *** add px-1.5 > can combine string with object
+const finalClassName = classnames('px-1.5', {
   'bg-blue-500': true,
-  'text-yellow': false, // false > won't be included
+  'text-yellow': false,
 })
 
 console.log(finalClassName)
