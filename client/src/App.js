@@ -1,6 +1,8 @@
 /*
-  Changing Context Values (***)
-  - pic
+  More on Changing Context
+  - context/books.js
+  - index.js
+  - BookList.js
 
 */
 
