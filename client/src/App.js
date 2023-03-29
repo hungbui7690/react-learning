@@ -1,8 +1,9 @@
 /*
-  Review on Styling
+  The ClassNames Library P1
   - pic
 
-  - Button.js
+  - instead of doing like in Button.js, we use library to make it easier and less tedious
+
 */
 
 import Button from './Button'
@@ -11,13 +12,9 @@ function App() {
   return (
     <div>
       <div>
-        <Button success rounded outline>
-          Click Me!
-        </Button>
+        <Button primary>Click Me!</Button>
         <div>
-          <Button danger outline>
-            Buy Now!
-          </Button>
+          <Button success>Buy Now!</Button>
         </div>
       </div>
     </div>

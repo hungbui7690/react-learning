@@ -10,12 +10,17 @@ const Button = ({
   outline,
   rounded,
 }) => {
-  // *** primary button > warning: yellow > success: green
-  return (
-    <button className='px-3 m-2 py-1.5 border-blue-600 bg-blue-500 text-white'>
-      {children}
-    </button>
-  )
+  // ***
+  let baseClassName = `px-3 m-2 py-1.5 `
+
+  if (primary) {
+    baseClassName += `border-blue-600 bg-blue-500 `
+  }
+  if (success) {
+    baseClassName += `border-green-900 bg-green-800 `
+  }
+
+  return <button className={`${baseClassName} text-white`}>{children}</button>
 }
 
 Button.propTypes = {
