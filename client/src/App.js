@@ -1,6 +1,5 @@
 /*
-  Variation on Event Handlers P1
-  - pic
+  Variation on Event Handlers P2
   - Accordion.js
 
 */

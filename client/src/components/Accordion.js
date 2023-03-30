@@ -3,18 +3,18 @@ import React, { useState } from 'react'
 const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(0)
 
+  // *** with this setup, we can place this function outside of map() method
+  const handleClick = (nextIndex) => {
+    setExpandedIndex(nextIndex)
+  }
+
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex
-
-    // *** need to placed inside map()
-    const handleClick = () => {
-      setExpandedIndex(index)
-    }
 
     // ***
     return (
       <div key={item.id}>
-        <div onClick={handleClick}>{item.label}</div>
+        <div onClick={() => handleClick(index)}>{item.label}</div>
         {isExpanded && <div>{item.content}</div>}
       </div>
     )
