@@ -1,7 +1,5 @@
 /*
-  Toggling Panel Collapse P1
-  - expandedIndex = -1 
-    > collapsed
+  Toggling Panel Collapse P2
 
 */
 
