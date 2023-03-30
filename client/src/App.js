@@ -1,5 +1,6 @@
 /*
-  Variation on Event Handlers P2
+  Conditional Icon Rendering
+  - pic
   - Accordion.js
 
 */
