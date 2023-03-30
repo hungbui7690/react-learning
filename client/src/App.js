@@ -1,5 +1,5 @@
 /*
-  Inline Event Handlers
+  Variation on Event Handlers P1
   - pic
   - Accordion.js
 
