@@ -1,6 +1,7 @@
 /*
-  Adding Styling
-  - add tailwind class
+  Toggling Panel Collapse P1
+  - expandedIndex = -1 
+    > collapsed
 
 */
 

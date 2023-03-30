@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import { GoChevronDown, GoChevronLeft } from 'react-icons/go' // ***
+import { GoChevronDown, GoChevronLeft } from 'react-icons/go'
 
 const Accordion = ({ items }) => {
-  const [expandedIndex, setExpandedIndex] = useState(0)
+  const [expandedIndex, setExpandedIndex] = useState(-1) // ***
 
   const handleClick = (nextIndex) => {
     setExpandedIndex(nextIndex)
