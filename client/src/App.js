@@ -1,5 +1,6 @@
 /*
-  Toggling Panel Collapse P2
+  Optional Delayed State Updates
+  - pic
 
 */
 

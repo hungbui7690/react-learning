@@ -6,7 +6,7 @@ const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(0)
 
   const handleClick = (nextIndex) => {
-    // ***
+    console.log(expandedIndex) // ***
     if (expandedIndex === nextIndex) setExpandedIndex(-1)
     else setExpandedIndex(nextIndex)
   }
