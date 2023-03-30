@@ -1,6 +1,5 @@
 /*
-  Conditional Icon Rendering
-  - pic
+  Displaying Icons
   - Accordion.js
 
 */
