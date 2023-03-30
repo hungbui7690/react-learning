@@ -1,6 +1,7 @@
 /*
-  Optional Delayed State Updates
+  Optional Functional State Updates
   - pic
+  - Accordion.js
 
 */
 

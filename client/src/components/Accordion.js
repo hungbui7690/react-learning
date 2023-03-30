@@ -6,9 +6,14 @@ const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(0)
 
   const handleClick = (nextIndex) => {
-    console.log(expandedIndex) // ***
-    if (expandedIndex === nextIndex) setExpandedIndex(-1)
-    else setExpandedIndex(nextIndex)
+    console.log('STALE version: ', expandedIndex)
+
+    // *** fix using functional update
+    setExpandedIndex((currentIndex) => {
+      console.log('UP TO DATE version: ', currentIndex)
+      if (currentIndex === nextIndex) return -1
+      else return nextIndex
+    })
   }
 
   const renderedItems = items.map((item, index) => {
