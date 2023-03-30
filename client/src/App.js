@@ -1,6 +1,6 @@
 /*
-  Displaying Icons
-  - Accordion.js
+  Adding Styling
+  - add tailwind class
 
 */
 
